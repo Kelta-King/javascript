@@ -139,17 +139,20 @@ Other Style Guides
     ```
 
   <a name="references--block-scope"></a><a name="2.3"></a>
-  - [2.3](#references--block-scope) Note that both `let` and `const` are block-scoped.
+  - [2.3](#references--block-scope) Note that both `let` and `const` are block-scoped. 
 
     ```javascript
     // const and let only exist in the blocks they are defined in.
     {
       let a = 1;
       const b = 1;
+      var c = 1;
     }
     console.log(a); // ReferenceError
     console.log(b); // ReferenceError
+    console.log(c); // Prints 1
     ```
+    In above code, you can see that the `a` and `b` will generate reference error and `c` prints the number. It is because `a` and `b` are block scoped while `c` is not.
 
 **[⬆ back to top](#table-of-contents)**
 
